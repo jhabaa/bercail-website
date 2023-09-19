@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        {% block head %}
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="theme-color" content="#0b3e05" media="(prefers-color-scheme: dark)">
+            <title>{% block title %}{% endblock %} - My Layout</title></title>
+            <meta name="description" content="">
+            <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="/static/style.css">
+        {% endblock %}
+        
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="/static/img/logo.jpeg" alt="Le Berkay ASBL">
+                </div>
+                <div class="menu-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="navigation-menu">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#about-us">Activités</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </section>
+        
+        <!--Content-->
+        <div id="content">
+            {% block content %}
+            <!--Background-->
+        <img src="/static/img/ezgif.com-reverse.gif" alt="background" class="bg">
+            {% endblock %}
+        </div>               
+       
+        <script src="/static/js.js" async defer></script>
+    </body>
+</html>
