@@ -1,10 +1,10 @@
-var hamburger = document.querySelector(".hamburger");
+
 var nav = document.querySelector(".navigation-menu");
 var links = document.querySelectorAll(".nav-links li");
-
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("open");
+var give_btn = document.querySelector(".give-btn");
+nav.addEventListener("click", () => {
     nav.classList.toggle("open");
+    give_btn.classList.toggle("hide");
     links.forEach(link => {
         link.classList.toggle("fade");
     });

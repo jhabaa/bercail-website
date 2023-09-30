@@ -4,45 +4,19 @@
 
 {% block content %}
     {{ super() }}
-    <h1>Home</h1>
-    <p class="lead">Welcome to the home page!</p>
-
     <!-- Main -->
     <main>
+
+        <button class="give-btn">
+            <a href="{{ url_for('review')}}" target="_blank">Donner mon avis</a>
+        </button>
         <div class="container">
             <div class="main-content">
-                <img src="/static/img/cm.svg" alt="CMR"/>
+                <img src="/static/img/cm.png" alt="CMR"/>
                 <h1>Le Berkay ASBL</h1>
                 <p>Pour nos écoliers et orphelins du Cameroun</p>
             </div>
             
-        </div>
-
-        <!--Qui sommes Nous ?-->
-        <div class="container-2">
-            <section class="bloc" id="about-us">
-                <h2>Activités</h2>
-                <p>Le Berkay ASBL est une association sans but lucratif qui a pour objectif de venir en aide aux enfants démunis du Cameroun. Elle a été créée en 2018 par des jeunes camerounais vivant en Belgique.</p>
-                <img src="/static/img/img1.jpeg" alt="children">
-                <p>
-                    Elle participe depuis aux quinze jours de la solidarité internationale organisés par la ville de Bruxelles. Elle a également participé à la journée de la femme organisée par la commune de Saint-Gilles en 2019.
-                    Durant ces évênement, elle a pu récolter des fonds pour la construction d'une école primaire dans le village de Nkong-Ni dans la région de l'Ouest Cameroun, ainsi que pour l'achat de fournitures scolaires pour les enfants de ce village.
-                </p>
-            </div>
-        </div>
-
-        <!--Contact-->
-        <section class="container-2" id="contact">
-            <section class="bloc-1">
-                <h2>Contacts</h2>
-                <p>Vous pouvez nous contacter via les réseaux sociaux ou par mail.</p>
-                <div class="social-media">
-                    <a href="https://www.facebook.com/leberkayasbl/" target="_blank"><img src="/static/img/facebook.png" alt="facebook"></a>
-                    <a href="https://www.instagram.com/leberkayasbl/" target="_blank"><img src="/static/img/instagram.png" alt="instagram"></a>
-                    <a href="https://www.linkedin.com/company/le-berkay-asbl/" target="_blank"><img src="/static/img/linked-in.png" alt="linkedin"></a>
-                    <a href="mailto:"></a>
-                </div>
-            </section>
         </div>
 
     </main>

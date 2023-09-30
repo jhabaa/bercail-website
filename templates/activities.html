@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block title %}activities{% endblock %}
+{% block head %}
+{{ super() }}
+<link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+<link rel="stylesheet" href="/static/locomotive-scroll.min.css">
+{% endblock %}
+
+{% block content %}
+<main data-scroll-container>
+    <!--Activities during years-->
+        <h2>Activités</h2>
+            <div class="card" data-scroll-section>
+                <h3 data-scroll data-scroll-speed="1">2023</h3>
+                <video
+    id="vid1"
+    class="video-js vjs-default-skin"
+    controls
+    poster=""
+    data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=zNW99g9zAvc&t=26s"}], "youtube": { "iv_load_policy": 1 } }'
+  >
+  </video>
+                <p data-scroll data-scroll-speed="3">Le Berkay ASBL a participé aux quinze jours de la solidarité internationale organisés par la ville de Bruxelles. Elle a également participé à la journée de la femme organisée par la commune de Saint-Gilles en 2019.</p>
+            </div>
+            <div class="card">
+                <h3>2022</h3>
+                <p>Le Berkay ASBL a participé aux quinze jours de la solidarité internationale organisés par la ville de Bruxelles. Elle a également participé à la journée de la femme organisée par la commune de Saint-Gilles en 2019.</p>
+            </div>
+            <div class="card">
+                <h3>2021</h3>
+                <p>Le Berkay ASBL a participé aux quinze jours de la solidarité internationale organisés par la ville de Bruxelles. Elle a également participé à la journée de la femme organisée par la commune de Saint-Gilles en 2019.</p>
+            </div>
+      
+            <!--Qui sommes Nous ?-->
+        <div class="container-2">
+            <section class="bloc" id="about-us">
+                <h2>Activités</h2>
+                <p>Le Berkay ASBL est une association sans but lucratif qui a pour objectif de venir en aide aux enfants démunis du Cameroun. Elle a été créée en 2018 par des jeunes camerounais vivant en Belgique.</p>
+                <img src="/static/img/img1.jpeg" alt="children">
+                <p>
+                    Elle participe depuis aux quinze jours de la solidarité internationale organisés par la ville de Bruxelles. Elle a également participé à la journée de la femme organisée par la commune de Saint-Gilles en 2019.
+                    Durant ces évênement, elle a pu récolter des fonds pour la construction d'une école primaire dans le village de Nkong-Ni dans la région de l'Ouest Cameroun, ainsi que pour l'achat de fournitures scolaires pour les enfants de ce village.
+                </p>
+            </div>
+        </div>
+
+        <!--Contact-->
+        <section class="container-2" id="contact">
+            <section class="bloc-1">
+                <h2>Contacts</h2>
+                <p>Vous pouvez nous contacter via les réseaux sociaux ou par mail.</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/leberkayasbl/" target="_blank"><img src="/static/img/facebook.png" alt="facebook"></a>
+                    <a href="https://www.instagram.com/leberkayasbl/" target="_blank"><img src="/static/img/instagram.png" alt="instagram"></a>
+                    <a href="https://www.linkedin.com/company/le-berkay-asbl/" target="_blank"><img src="/static/img/linked-in.png" alt="linkedin"></a>
+                    <a href="mailto:"></a>
+                </div>
+            </section>
+        </div>
+
+</main>
+<script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+<script src="/static/Youtube.min.js"></script>
+<script src="/static/locomotive-scroll.min.js"></script>
+<script defer>
+    var player = videojs('vid1');
+    const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true
+});
+
+</script>
+{% endblock %}
